@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage("Build stage"){
+            steps{
+                echo 'Building the application'
+                sh 'pwd'
+                
+            }
+        }
+        stage("test"){
+            steps{
+                echo 'testing the application'
+            }
+        }
+        stage("Deploy"){
+            steps{
+                echo 'deploying the application'
+                sh 'ls -lrt'
+                sh 'pwd'
+                sh 'date'
+            }
+        }
+    }
+}
